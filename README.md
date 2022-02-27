@@ -11,7 +11,8 @@
 
 1. 在MySql数据库中创建实例，将本仓库中 ` /Datebase/db.sql ` 导入数据库
 2. 在函数计算中创建 `通过 HTTP 请求触发` 的函数，并上传 ` /FunctionCompute ` 目录下的全部文件到代码包中
-3. 设置函数的环境变量，添加以下变量
+3. 在云函数的终端中执行 `pip install -r requirements.txt -t .` 并部署最终的代码包
+4. 设置函数的环境变量，添加以下变量
     ```
     sql_database: MySql数据库实例名
     sql_host: MySql数据库实例的EndPoint
@@ -24,16 +25,16 @@
     wx_secret: 你的企业微信的程序密钥 (用于接收管理通知，无需通知可留空)
     wx_corpid: 你的企业微信组织ID (用于接收管理通知，无需通知可留空)
     ```
-4. 创建 [微信小程序](https://mp.weixin.qq.com/)，并在订阅消息中申请 `投稿审核通知` 模板
-5. 将 `/MiniProgram` 目录下的所有文件导入 微信开发者工具
-6. 修改 `app.js` 中的3~4行填入对应信息
+5. 创建 [微信小程序](https://mp.weixin.qq.com/)，并在订阅消息中申请 `投稿审核通知` 模板
+6. 将 `/MiniProgram` 目录下的所有文件导入 微信开发者工具
+7. 修改 `app.js` 中的3~4行填入对应信息
     ```
     globalData: {
         gateway : '', //阿里云函数HTTP触发器的公网访问地址
         msgtmplid: '', //后台申请的投稿审核通知消息模板ID
     },
     ```
-7. 上传代码，提交审查
+8. 上传代码，提交审查
 
 # 管理方式
 
