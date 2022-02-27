@@ -1,0 +1,20 @@
+{
+  "name": "mini-program-shortcuts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "umtrack-wx": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@code.aliyun.com:starchina/mini-program-shortcuts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

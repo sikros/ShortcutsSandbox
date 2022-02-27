@@ -1,0 +1,16 @@
+@import "/colorui/animation.wxss";
+
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}
+
+.page_hd {
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+
+page {
+  background: linear-gradient(#0081ff, 20%, white);
+  background-repeat: no-repeat;
+}

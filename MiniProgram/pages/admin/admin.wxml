@@ -1,0 +1,70 @@
+<cu-custom bgAlpha="{{bgAlpha}}" isCustom="{{true}}">
+  <view slot="content">作品管理</view>
+</cu-custom>
+
+<view wx:if="{{islogin==0 || isadmin==0}}" class='padding margin-top'>
+  <button class='lg bg-green' bindtap='login'>登录</button>
+  <view class='text-center text-lg padding'><text class='text-light text-red padding'>{{msg}}</text></view>
+  <view class='text-center padding'><text class='text-light text-gray padding' bindtap="CopyText"
+      data-link="{{openid}}">{{openid}}</text></view>
+</view>
+
+<view wx:if="{{islogin==1 && isadmin==1}}" class="padding text-center">
+  <form bindsubmit='submitForm'>
+    <view class="text-center">
+      <view class="flex  justify-center">
+        <view class="margin-xs radius">当前作品Sid:{{sid}}</view>
+        <view class="margin-xs radius"><button class="cu-btn sm" bindtap='ChangeSid'>切换作品</button></view>
+      </view>
+      <view class="cu-form-group margin-top">
+        <view class="title">名称</view>
+        <input class="text-left" placeholder="无需修改的项目请保留不要清空" name="name" value='{{name}}'></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">链接</view>
+        <input class="text-left" placeholder="无需修改的项目请保留不要清空" name="url" value='{{url}}'></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">作者</view>
+        <input class="text-left" placeholder="无需修改的项目请保留不要清空" name="author" value='{{author}}'></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">主页</view>
+        <input class="text-left" placeholder="无需修改的项目请保留不要清空" name="homepage" value='{{homepage}}'></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">类型</view>
+        <picker bindchange="PickerChange" value="{{category}}" range="{{cate}}" name="category">
+          <view class="picker">
+            {{category}}
+          </view>
+        </picker>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">简介</view>
+        <textarea class="text-left" placeholder="" name="intro" value='{{intro}}'>
+        </textarea>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">推荐</view>
+        <checkbox bindtap="TapRecommend" class="text-left" placeholder="" name="recommend" value='{{recommend}}'
+          checked="{{recommend==0?'':'true'}}">
+        </checkbox>
+        <view class="title">未审批</view>
+        <checkbox bindtap="TapBlock" class="text-left" placeholder="" name="block" value='{{block}}'
+          checked="{{block==0?'':'true'}}">
+        </checkbox>
+      </view>
+    </view>
+
+    <view class="padding">
+      <view class="flex">
+        <view class="flex-sub radius"> <button class="cu-btn bg-red margin-tb-sm lg"
+            bindtap="del">删除作品</button></view>
+        <view class="flex-sub radius"> <button class="cu-btn bg-blue margin-tb-sm lg"
+            form-type='submit'>确认更改</button></view>
+      </view>
+
+    </view>
+  </form>
+</view>

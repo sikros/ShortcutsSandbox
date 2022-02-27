@@ -1,0 +1,107 @@
+<cu-custom bgAlpha="{{bgAlpha}}" isCustom="{{true}}">
+  <view slot="content">{{name}}</view>
+</cu-custom>
+
+<view class="flex-sub text-center solids-bottom ">
+  <view class="text-xxl padding">
+    <text class="text-black text-bold text-shadow"> {{name}}</text>
+  </view>
+  <view class="cu-capsule radius">
+    <view class="cu-tag bg-grey">
+      作者
+    </view>
+    <view class="cu-tag ine-grey" bindtap="CopyLink" data-link="{{homepage}}">
+      {{author}}
+    </view>
+  </view>
+  <view class="padding">{{intro}}</view>
+</view>
+<view class="flex-sub solids-bottom ">
+<view class="flex padding justify-left">
+  <text> 安装链接：</text>
+</view>
+
+<view class="padding-sm">
+  <view class="bg-blue padding radius text-center shadow-blur" bindtap="CopyLink" data-link="{{url}}">
+    <view class="text-abc radius text-warp">{{url}}</view>
+  </view>
+</view>
+
+<view class="flex padding justify-center">
+  <text> ⬆ 点击链接复制到剪贴板 ⬆</text>
+</view>
+</view>
+    <view class="grid col-2 margin-top text-center">
+<view><button class="cu-btn bg-brown lg" bindtap="feedback"> <text class="cuIcon-flashbuyfill"></text>举报</button></view>
+<view><button class="cu-btn bg-red lg" open-type="share"> <text class="cuIcon-share"></text>分享</button></view>
+  </view>
+<view class="cu-bar margin-top solid-bottom">
+  <view class="action border-title">
+    <text class="cuIcon-titles text-green"></text>
+    <text class="text-xl text-bold">操作说明</text>
+  </view>
+</view>
+<view class="padding">
+  <view class="cu-timeline">
+    <view class="cu-item text-green">
+      <view class="bg-gradual-green content shadow">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-white text-green">系统要求</view>
+          <view class="cu-tag line-white">iOS13以上</view>
+        </view>
+        <view class="margin-top-sm text-content">
+          <view>1.将系统版本升级为iOS13以上</view>
+          <view>2.安装有快捷指令APP(原：捷径)</view>
+          <view>3.在设置-快捷指令中打开“允许不受信任的快捷指令”选项</view>
+          <view>4.保证网络可以正常访问iCloud</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-timeline">
+    <view class="cu-item text-red">
+      <view class="bg-gradual-red content shadow">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-white text-green">快捷安装</view>
+          <view class="cu-tag line-white">推荐方式</view>
+        </view>
+        <view class="margin-top-sm text-content">
+          <view>1.先安装捷径安装器</view>
+          <view>2.复制上方的安装链接</view>
+          <view>3.运行捷径安装器</view>
+          <view>捷径安装器下载地址：</view>
+          <view class="bg-blue padding-sm margin-xs radius text-warp" bindtap="CopyLink"
+            data-link="https://www.icloud.com/shortcuts/4f4bd2d76aa148c28d9c2eab84483892">
+            https://www.icloud.com/shortcuts/4f4bd2d76aa148c28d9c2eab84483892</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-timeline">
+    <view class="cu-item text-blue">
+      <view class="bg-gradual-blue content shadow">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-white text-green">手动安装</view>
+          <view class="cu-tag line-white">次选方式</view>
+        </view>
+        <view class="margin-top-sm text-content">
+          <view>1.复制安装链接</view>
+          <view>2.粘贴到Safari并打开</view>
+          <view>3.在弹出的页面中点击“获取捷径”</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<ad unit-id="adunit-b73690a4029c5765"></ad>
+
+<view class="padding-xs flex align-center" bindlongpress="admin">
+  <view class="flex-sub text-center">
+    <view class="solid-bottom text-xs">
+      <text class="text-gray">收录作品版权归原作者所有，若作品侵犯您的权益请反馈给我们处理。</text>
+    </view>
+    <view class="solid-bottom text-xs">
+      <text class="text-gray">特别声明：本站不对作品内容及相关风险做出任何承诺。</text>
+    </view>
+  </view>
+</view>

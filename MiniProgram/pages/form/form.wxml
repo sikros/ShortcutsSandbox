@@ -1,0 +1,57 @@
+<cu-custom bgAlpha="{{bgAlpha}}" isCustom="{{true}}">
+  <view slot="content">发布作品</view>
+</cu-custom>
+
+<view class="padding text-center">
+  <form bindsubmit='submitForm'>
+    <view class="flex-sub text-center">
+      <view class="solid-bottom text-lg padding">
+        <text>请填写你的作品信息</text>
+      </view>
+
+      <view class="cu-form-group margin-top">
+        <view class="title">名称</view>
+        <input class="text-left" placeholder="请填写捷径的名称" name="name" value='{{form_info}}'></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">链接</view>
+        <input class="text-left" placeholder="请填写iCloud URL" name="url" value='{{form_info}}'></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">作者</view>
+        <input class="text-left" placeholder="原创作品请填写自己的昵称" name="author" value='{{form_info}}'></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">主页</view>
+        <input class="text-left" placeholder="点击作者名会复制到剪贴板" name="homepage" value='{{form_info}}'></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">类型</view>
+        <picker bindchange="PickerChange" value="{{category[index]}}" range="{{category}}" name="category">
+          <view class="picker">
+            {{index?category[index]:'请选择'}}
+          </view>
+        </picker>
+
+      </view>
+      <view class="cu-form-group">
+        <view class="title">简介</view>
+        <textarea class="text-left" placeholder="请填写作品简介" name="intro" value='{{form_info}}'>
+        </textarea>
+      </view>
+      <view class='cu-form-group padding'>
+        <checkbox-group name="assistance">
+          <checkbox></checkbox> <text class="text-gray">承诺本作品符合当地法律和相关法规，不含有侵犯他人权利的内容</text>
+        </checkbox-group>
+      </view>
+    </view>
+    <view class="padding flex flex-direction">
+      <button class="cu-btn bg-blue margin-tb-sm lg" form-type='submit' bindtap='SubscribeMessage'>提交审核</button>
+    </view>
+  </form>
+</view>
+
+<view class="page_hd padding flex  justify-center ">
+  <text class='text-pink text-light text-shadow text-center'>
+  <text class="cuIcon-likefill iconfont-pulse"></text>听说爱分享的人，运气都不会太差<text class="cuIcon-likefill iconfont-pulse"></text></text>
+</view>

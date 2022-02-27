@@ -1,0 +1,77 @@
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+
+.scrollPage {
+  height: 100vh;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 40rpx 0px;
+  justify-content: space-between;
+}
+
+.nav-li {
+  padding: 30rpx;
+  border-radius: 12rpx;
+  width: 45%;
+  min-height: 15vh;
+  margin: 0 2.5% 40rpx;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+
+.nav-li.cur {
+  color: #fff;
+  background: rgb(94, 185, 94);
+  box-shadow: 4rpx 4rpx 6rpx rgba(94, 185, 94, 0.4);
+}
+
+.nav-title {
+  font-size: 32rpx;
+  font-weight: bolder;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+.nav-name {
+  font-size: 24rpx;
+  text-transform: Capitalize;
+  margin-top: 20rpx;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:4; 
+  overflow: hidden;
+}
+.nav-text {
+  font-size: 16rpx;
+  text-transform: Capitalize;
+  text-align: center;
+  margin-top: 20rpx;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1; 
+
+  overflow: hidden;
+}
+
+.nav-li text {
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  font-size: 52rpx;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.text-light {
+  font-weight: 300;
+}

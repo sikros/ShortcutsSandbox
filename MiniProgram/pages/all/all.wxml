@@ -1,0 +1,23 @@
+<cu-custom bgAlpha="{{bgAlpha}}" isSearch="{{true}}">
+  <view slot="content">{{CurType}}捷径</view>
+</cu-custom>
+
+<scroll-view scroll-x class="nav text-center">
+  <view class="cu-item {{index==TabCur?'text-white cur':'text-black'}} text-bold" wx:for="{{CatList}}" bindtap="tabSelect"
+    data-type="{{item}}" data-id="{{index}}" wx:key="item">
+    {{item}}
+  </view>
+</scroll-view>
+
+<view style="height:10px"></view>
+
+<view class='nav-list' >
+  <navigator open-type="navigate" hover-class='none'
+    url="/pages/summary/summary?sid={{item.sid}}"
+    class="nav-li bg-{{item.color}} animation-slide-bottom" wx:for="{{showitem}}" wx:key="index"
+    wx:if="{{showList}}">
+    <view class="nav-title">{{item.name}}</view>
+    <view class="nav-name">{{item.intro}}</view>
+  </navigator>
+</view>
+<view class='cu-tabbar-height'></view>

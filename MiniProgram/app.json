@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/admin/admin",
+    "pages/summary/summary",
+    "pages/about/about",
+    "pages/form/form",
+    "pages/all/all",
+    "pages/search/search",
+    "pages/admin/list"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "images/tabbar/basics_cur.png",
+        "iconPath": "images/tabbar/basics.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/all/all",
+        "selectedIconPath": "images/tabbar/component_cur.png",
+        "iconPath": "images/tabbar/component.png",
+        "text": "全部"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "selectedIconPath": "images/tabbar/about_cur.png",
+        "iconPath": "images/tabbar/about.png",
+        "text": "关于"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "捷径沙盒",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "plugins": {
+    "materialPlugin": {
+      "version": "1.0.5",
+      "provider": "wx4d2deeab3aed6e5a"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

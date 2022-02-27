@@ -1,0 +1,33 @@
+<cu-custom bgAlpha="{{bgAlpha}}" isCustom="{{true}}">  
+  <view slot="content">搜索</view>
+</cu-custom>
+<view class="box">
+  <view class="cu-bar search">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input id="search" type="text" bindinput='wxSearchInput' value='{{k}}' bindconfirm='wxSearchFn' bindfocus="wxSerchFocus"
+        bindblur="wxSearchBlur" placeholder='请输入搜索内容' confirm-type="search"></input>
+    </view>
+
+    <view class="action">
+      <button class='cu-btn bg-green shadow-blur round' bindtap="wxSearchFn" hover-class='button-hover'>搜索</button>
+    </view>
+  </view>
+</view>
+
+<view style="height:10px"></view>
+
+<view class='nav-list'>
+  <navigator open-type="navigate" hover-class='none'
+    url="/pages/summary/summary?sid={{item.sid}}"
+    class="nav-li bg-{{item.color}} animation-fade" wx:for="{{showitem}}" wx:key="index"
+    wx:if="{{showList}}">
+    <view class="nav-title">{{item.name}}</view>
+    <view class="nav-name">{{item.intro}}</view>
+  </navigator>
+</view>
+<view class="padding-xl">
+  <button  bindtap="wxSearchRand"  class="cu-btn block bg-blue margin-tb-sm lg">
+    <text class="cuIcon-cascades iconfont-spin"></text>  抽盲盒</button>
+</view>
+<view class='cu-tabbar-height'></view>

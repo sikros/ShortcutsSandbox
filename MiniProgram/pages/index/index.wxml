@@ -1,0 +1,23 @@
+<cu-custom bgAlpha="{{bgAlpha}}" isSearch="{{true}}">
+  <view slot="content">捷径沙盒</view>
+</cu-custom>
+
+<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true"
+  interval="5000" duration="500" wx:if='{{showSwiper}}'>
+  <swiper-item bindtap="jumpPage"
+    data-url="/pages/summary/summary?sid={{item.sid}}"
+    wx:for="{{swiperList}}" wx:key="index">
+    <view class="swiper-item">
+      <image src="{{item.image}}" bindtap="jump" mode="aspectFill"></image>
+    </view>
+  </swiper-item>
+</swiper>
+
+<view class='nav-list' wx:if='{{showList}}'>
+  <navigator open-type="navigate" hover-class='none'
+    url="/pages/summary/summary?sid={{item.sid}}"  class="nav-li bg-{{item.color}} animation-slide-bottom" wx:for="{{showitem}}" wx:key="index">
+    <view class="nav-title">{{item.name}}</view>
+    <view class="nav-name">{{item.intro}}</view>
+  </navigator>
+</view>
+<view class='cu-tabbar-height'></view>

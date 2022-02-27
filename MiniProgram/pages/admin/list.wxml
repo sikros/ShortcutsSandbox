@@ -1,0 +1,23 @@
+<cu-custom bgAlpha="{{bgAlpha}}" isCustom="{{true}}">
+  <view slot="content">审批</view>
+</cu-custom>
+<view wx:if="{{islogin==0 || isadmin==0}}" class='padding margin-top'>
+  <button class='lg bg-green' bindtap='login'>登录</button>
+  <view class='text-center text-lg padding'><text class='text-light text-red padding'>{{msg}}</text></view>
+  <view class='text-center padding'><text class='text-light text-gray padding' bindtap="CopyText"
+      data-link="{{openid}}">{{openid}}</text></view>
+</view>
+
+<view wx:if="{{islogin==1 && isadmin==1}}" class="padding text-center">
+  <view class='padding text-light text-sm'>点击复制作品链接，长按进入审批</view>
+  <view class='nav-list'>
+    <navigator open-type="navigate" url="{{item.url}}" hover-class='none' bindtap="CopyText" bindlongpress="Commit" data-link="{{item.url}}" data-id="{{item.sid}}"
+      class="nav-li bg-{{item.color}}" wx:for="{{list}}" wx:key="index" data-index="{{index}}">
+      <view class="nav-title">{{item.name}}</view>
+      <view class="nav-name">{{item.intro}}</view>
+      <view class="nav-text">{{item.sid}}/{{item.category}}/{{item.author}}</view>
+      
+    </navigator>
+  </view>
+
+</view>
