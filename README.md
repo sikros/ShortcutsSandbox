@@ -1,12 +1,12 @@
 # 程序简介
 
-这个家伙很懒，从不写简介，具体功能请进入  [捷径沙盒小程序](weixin://dl/business/?t=HmDrzjgz5Uj) 自行查看
+这个家伙很懒，从不写简介，具体功能请进入 [捷径沙盒小程序](https://api.xcjkwl.com/go/jjsh) 自行查看
 
 ![](https://kim.xcjkwl.com/images/jjsh.jpg)
 
 # 部署方式
 
-首先进入 [阿里云函数](https://www.aliyun.com/minisite/goods?userCode=ixqnlu7p) 开通MySql数据库和函数计算2款产品
+首先进入 [阿里云函数](https://api.xcjkwl.com/go/aliyun) 开通MySql数据库和函数计算2款产品
 > 由于个人精力有限，本程序目前只适配了阿里云，使用其他云的用户可自行修改，并欢迎Pull Request
 
 1. 在MySql数据库中创建实例，将本仓库中 ` /Datebase/db.sql ` 导入数据库
